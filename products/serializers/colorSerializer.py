@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from models import Color
+from products.models import Color
 
 class ColorSerializer(serializers.ModelSerializer):
 
