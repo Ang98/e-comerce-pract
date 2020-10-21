@@ -6,7 +6,7 @@ from products.models import Category
 
 from datetime import datetime
 
-class CategoryView(APIView):
+class CategoryLatestView(APIView):
 
     def get(self, request, *args, **kwargs):
         latest = Category.objects.order_by('-created')[:10]

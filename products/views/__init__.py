@@ -1,2 +1,3 @@
-from .productView import ProductView
-from .categoryView import CategoryView
+from .productView import *
+from .categoryView import CategoryLatestView
+from .colorView import ColorLatestView
