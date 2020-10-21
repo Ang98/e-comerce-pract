@@ -1,6 +1,6 @@
-from rest_famework.views import APIView
+from rest_framework.views import APIView
 from rest_framework.response import Response
-from serializers import EmployeeSerializer,LoginEmployeeSerializer
+from accounts.serializers import EmployeeSerializer,LoginEmployeeSerializer
 
 class LoginEmployee(APIView):
 
@@ -8,7 +8,7 @@ class LoginEmployee(APIView):
         serializer= LoginEmployeeSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         token = serializer.save()
-        data={'token_key':token}
+        data={'token':token}
         return Response(data)
 
 

@@ -1,7 +1,8 @@
-from rest_famework.views import APIView
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
-
-class LoginEmployee(APIView):
-
-    def def post(self, request, *args, **kwargs):
-        return super().post(request, *args, **kwargs)
+class Logout(APIView):
+    def post(self, request, *args, **kwargs):
+        request.user.auth_token.delete()
+        return Response(status=status.HTTP_200_OK)
