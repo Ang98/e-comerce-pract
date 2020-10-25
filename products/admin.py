@@ -10,3 +10,7 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display=('name','created','modified')
+
+@admin.register(Color)
+class ColorAdmin(admin.ModelAdmin):
+    list_display=('name','hex_code','created','modified')

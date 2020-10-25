@@ -1,3 +1,5 @@
 from .productView import *
-from .categoryView import CategoryLatestView
-from .colorView import ColorLatestView
+from .categoryView import *
+from .colorView import *
+from .image_optionalView import *
+from .stockView import *
